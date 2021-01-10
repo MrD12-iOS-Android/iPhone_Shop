@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinner.setAdapter(arrayAdapter);
     }
 
+
     void oncreateHashMap(){
         goodsMap = new HashMap();
         goodsMap.put("iPhone", 300);
