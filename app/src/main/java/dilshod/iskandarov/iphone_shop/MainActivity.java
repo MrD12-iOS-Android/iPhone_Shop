@@ -60,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
     }
-
     void oncreateHashMap(){
         goodsMap = new HashMap();
         goodsMap.put("iPhone", 300);
@@ -72,7 +71,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         txt.setText(String.valueOf(click));
         TextView priceText = findViewById(R.id.price_txt);
         priceText.setText("" + click * price);
-
     }
     public void minus(View view) {
         if(click > 0){
@@ -82,9 +80,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         TextView priceText = findViewById(R.id.price_txt);
         priceText.setText("" + click * price);
-
     }
-
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         goodsName = spinner.getSelectedItem().toString();
@@ -109,9 +105,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
-
     }
-
     public void add_to_card(View view) {
         Order order = new Order();
         order.user_Name = userName.getText().toString();
@@ -124,8 +118,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         i.putExtra("order_click_for_intent", order.click);
         i.putExtra("order_price_for_intent", order.order_price);
         startActivity(i);
-
-
     }
 }
 
